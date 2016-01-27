@@ -111,11 +111,11 @@ var GF = function () {
                 break;
                 case gameStates.mainMenu:
                 ctx.fillStyle = 'black';
-                ctx.fillText("MAIN MENU", 50, 100);
-                ctx.fillText("Press SPACE to restart", 50, 150);
-                ctx.fillText("Press ENTER to back to game", 50, 200);
-                ctx.fillText("Move with arrow keys", 50, 250);
-                ctx.fillText("Save Princess Peach as fast as you can", 50, 300);
+                ctx.fillText("MAIN MENU", 20, 100);
+                ctx.fillText("Press SPACE to restart", 20, 150);
+                ctx.fillText("Press ENTER to back to game", 20, 200);
+                ctx.fillText("Move with arrow keys", 40, 250);
+                ctx.fillText("Save Princess Peach as fast as you can", 20, 300);
                 if (inputStates.space) {
                     startNewGame();
                 } else if(inputStates.enter) {
@@ -125,11 +125,11 @@ var GF = function () {
                break;
                case gameStates.gameOver:
                ctx.fillStyle = 'red';
-               ctx.fillText("GAME OVER :(", 50, 100);
-			   ctx.fillStyle = 'black';
-                ctx.fillText("Press SPACE to start again", 50, 150);
-                ctx.fillText("Move with arrow keys", 50, 200);
-                ctx.fillText("Save Princess Peach", 50, 250);
+               ctx.fillText("GAME OVER :(", 20, 100);
+			         ctx.fillStyle = 'black';
+                ctx.fillText("Press SPACE to start again", 20, 150);
+                ctx.fillText("Move with arrow keys", 20, 200);
+                ctx.fillText("Save Princess Peach", 20, 250);
                 if (inputStates.space) {
                     startNewGame();
                 }
@@ -137,18 +137,18 @@ var GF = function () {
                 case gameStates.levelWin:
                 
                 ctx.fillStyle = 'green';
-                ctx.fillText("CONGRATULATIONS :)", 50, 100);
+                ctx.fillText("CONGRATULATIONS :)", 20, 100);
                 ctx.fillStyle = 'black';
                 if(levels.length === currentLevel){  
-                   ctx.fillText("You saved the princess !!", 50, 150);
-                   ctx.fillText("Press SPACE to play again", 50, 200);
+                   ctx.fillText("You saved the princess !!", 20, 150);
+                   ctx.fillText("Press SPACE to play again", 20, 200);
                    if (inputStates.space) {
                     startNewGame();
                 }
             } else {
-                ctx.fillText("Press SPACE to go to the next level", 50, 150);
-                ctx.fillText("Move with arrow keys", 50, 200);
-                ctx.fillText("Save Princess Peach as fast as you can", 50, 250);
+                ctx.fillText("Press SPACE to go to the next level", 20, 150);
+                ctx.fillText("Move with arrow keys", 20, 200);
+                ctx.fillText("Save Princess Peach as fast as you can", 20, 250);
                 if (inputStates.space) {
                     goToNextLevel();
                     currentGameState = gameStates.gameRunning;
